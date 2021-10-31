@@ -1,0 +1,213 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	outline:none;
+}
+html,body{
+	background-image:linear-gradient(160deg,#fafafa 80%,#e01313 20%);
+}
+.container{
+	width:100%;
+	height:100vh;
+	overflow:hidden;
+	display:grid;
+	grid-template-columns:50% 50%;
+}
+.ptitle{
+	color:#e01313;
+	padding:5px;
+	border-radius:10px;
+	position:absolute;
+	right:40px;
+	font-size:25px;
+	font-family:cursive;
+}
+input[type=text]{
+	width:250px;
+	height:40px;
+	font-family:FontAwesome;
+	outline:none;
+	font-size:15px;
+	border:none;
+	border-radius:20px;
+	text-indent:20px;
+	box-shadow:inset -2px -2px 3px white,inset 2px 2px 3px #cec7c7,-2px -2px 5px white;
+}
+#range{
+-webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ecf0f3;
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+              inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 8px rgba(0, 0, 0, .3);
+  outline: none;
+  cursor: pointer;
+}
+#range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  position:relative;
+  z-index:9;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;
+  background-color: #e01313;
+}
+#range::-webkit-slider-thumb:hover{
+	width:30px;
+	height:30px;
+	transition:width 0.5s,height 0.5s;
+	box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;
+}
+.value {
+  position:relative;
+  bottom:15px;
+  width:0;
+  height: 10px;
+  border-radius: 5px 0 0 5px;
+  background-color: #a29999;
+}
+.form-cont{
+	position:relative;
+	left:50%;
+	top:50%;
+	width:300px;
+	height:350px;
+	transform:translate(-50%,-50%);
+	background-color:#fafafa;
+	border-radius:10px;
+	box-shadow:-2px -2px 5px white,inset 2px 2px 5px #a29999,2px 2px 5px #a29999;	
+}
+h1{
+	color:#e01313;
+	text-align:center;
+	position:relative;
+	top:20px;
+	font-family:Sans-Serif;
+}
+form{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+}
+.radiobtn{
+	width:100%;
+	height:40px;
+}
+.radiobtn > button{
+	color:#e01313;
+	font-weight:bold;
+	position:relative;
+	text-align:center;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	border-style:none;
+	background-color:#fafafa;
+	box-shadow:inset -2px -2px 5px #a29999,2px 2px 5px #cec7c7;
+	transition:width 0.5s,height 0.5s;
+}
+.radiobtn > button:hover{
+	width:50px;
+	height:50px;
+    box-shadow:-2px -2px 5px #cec7c7,inset 2px 2px 5px #a29999;	
+}
+.sbtn{
+	position:absolute;
+	left:50%; 
+	transform:translateX(-50%);
+	color:white;
+	font-size:16px;
+	font-family:sans-serif;
+	font-weight:bold;
+	background-color:#e01313;
+	padding:10px;
+	border-radius:5px;
+	border:none;
+	box-shadow:inset 2px 2px 5px #7b1919,-2px -2px 5px #a29999;
+}
+.sbtn:hover{
+	padding:15px;
+	transition:padding 0.5s;
+    box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;	
+}
+.pginfo{
+	width:100%;
+	height:auto;
+	position:relative;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	padding:20px;
+}
+.pginfo > h1{
+	text-align:left;
+	margin-bottom:40px;
+}
+.pginfo > p{
+	font-size:20px;
+	font-family:cursive;
+}
+.gsbtn{
+  position:relative;
+  font-size:16px;
+	margin-top:30px;
+	color:white;
+	font-family:sans-serif;
+	font-weight:bold;
+	background-color:#e01313;
+	padding:10px;
+	border-radius:5px;
+	border:none;
+	box-shadow:inset 2px 2px 5px #7b1919,-2px -2px 5px #a29999;
+}
+.gsbtn:hover{
+	padding:20px;
+	transition:padding 0.5s;
+    box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;	
+}	
+.socialic > button{
+	color:#e01313;
+	background-color:#fafafa;
+	font-weight:bold;
+	position:relative;
+	text-align:center
+	font-size:16px;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	margin-top:20px;
+	border-style:none;
+	box-shadow:inset -2px -2px 5px #a29999,2px 2px 5px #cec7c7;
+	transition:width 0.5s,height 0.5s;
+}
+.socialic > button:hover{
+	width:50px;
+	height:50px;
+    box-shadow:-2px -2px 5px #cec7c7,inset 2px 2px 5px #a29999;	
+}
+@media only screen and (max-width:786px){
+	.form-cont{
+		border:none;
+		box-shadow:none;
+	}
+	.container{
+		display:block;
+		overflow:scroll;
+	}
+	.column{
+		width:100%;
+		height:100vh;
+	}
+}
