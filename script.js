@@ -4,6 +4,7 @@ var optbtn=document.getElementsByClassName("opt-btn")[0];
 var optlist=document.getElementsByClassName("opt-list")[0];
 var dataimg=document.getElementsByClassName("imgdt")[0];
 		var dots=document.getElementsByClassName("img-dots")[0].children;
+document.addEventListener("DOMContentLoaded", function(event){
 slider.oninput = function(e) {
   var active = e.target.value;
   val.style.width = active+"%";
@@ -36,3 +37,4 @@ var arr=["example.jpg","example2.jpg","example3.jpg"];
 	    	i=1;
 	    	}
 	    },2500);
+});
