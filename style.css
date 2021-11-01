@@ -6,7 +6,7 @@
 	outline:none;
 }
 html,body{
-	background-image:linear-gradient(160deg,#fafafa 80%,#e01313 20%);
+	background-image:linear-gradient(160deg,#fafafa 80%,#1b66edeb 20%);
 }
 .container{
 	width:100%;
@@ -16,7 +16,7 @@ html,body{
 	grid-template-columns:50% 50%;
 }
 .ptitle{
-	color:#e01313;
+	color:#1b66edeb;
 	padding:5px;
 	border-radius:10px;
 	position:absolute;
@@ -42,11 +42,8 @@ input[type=text]{
   height: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #ecf0f3;
-  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-              inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-              inset 2px 2px 8px rgba(0, 0, 0, .3);
+  background-color: white;
+  box-shadow:inset -2px -2px 3px white,inset 2px 2px 3px #cec7c7,-2px -2px 5px white;
   outline: none;
   cursor: pointer;
 }
@@ -55,50 +52,98 @@ input[type=text]{
   appearance: none;
   position:relative;
   z-index:9;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 50%;
-  box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;
-  background-color: #e01313;
-}
-#range::-webkit-slider-thumb:hover{
-	width:30px;
-	height:30px;
-	transition:width 0.5s,height 0.5s;
-	box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;
+  background-color: #1b66edeb;
 }
 .value {
-  position:absolute;
-  top:63px;
+  position:relative;
+  margin-top:-15px;
   width:0;
-  height: 10px;
-  border-radius: 5px 0 0 5px;
-  background-color: #a29999;
+  height:10px;
+  border-radius:5px 0 0 5px;
+  background-color:#76edeecd;
 }
 .form-cont{
 	position:relative;
 	left:50%;
 	top:50%;
 	width:300px;
-	height:350px;
+	height:auto;
 	transform:translate(-50%,-50%);
+	padding:20px;
 	background-color:#fafafa;
 	border-radius:10px;
 	box-shadow:-2px -2px 5px white,inset 2px 2px 5px #a29999,2px 2px 5px #a29999;	
 }
+.opt-btn{
+	color:white;
+	position:relative;
+	left:0;
+	width:30px;
+	height:30px;
+	padding:5px;
+	outline:none;
+	border:none;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:5px;
+	border-radius:50%;
+	background-color:#1b66edeb;
+	cursor:pointer;
+	-webkit-tap-highlight-color:transparent;
+	tap-highlight-color:transparent;
+	box-shadow:inset 2px 2px 5px #1b66edeb,-2px -2px 5px #a29999;
+}
+.opt-btn:hover{
+  box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #1b66edeb;
+}
+.selector{
+	display:flex;
+}
+.opt-list{
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	margin-top:7px;
+	margin-left:40px;
+	text-align:center;
+	transform:scaleX(0);
+	transition:0.2s;
+}
+.opt-list > li{
+	color:white;
+	width:40px;
+	height:40px;
+	display:inline;
+	font-size:16px;
+	outline:none;
+	font-weight:bold;
+	padding:10px;
+	border-radius:50%;
+	background-color:#1b66edeb;
+	-webkit-tap-highlight-color:transparent;
+	tap-highlight-color:transparent;
+	cursor:pointer;
+	box-shadow:inset 2px 2px 5px #1b66edeb,-2px -2px 5px #a29999;
+}
+.opt-list >li:hover{
+  box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #1b66edeb;
+}
+.nav-list{
+	transform:scaleX(1);
+}
 h1{
-	color:#e01313;
+	color:#1b66edeb;
 	text-align:center;
 	position:relative;
 	top:20px;
 	font-family:Sans-Serif;
 }
 form{
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
 	text-align:center;
 }
 .radiobtn{
@@ -106,7 +151,7 @@ form{
 	height:40px;
 }
 .radiobtn > button{
-	color:#e01313;
+	color:#1b66edeb;
 	font-weight:bold;
 	position:relative;
 	text-align:center;
@@ -116,92 +161,71 @@ form{
 	border-style:none;
 	background-color:#fafafa;
 	box-shadow:inset -2px -2px 5px #a29999,2px 2px 5px #cec7c7;
-	transition:width 0.5s,height 0.5s;
 }
 .radiobtn > button:hover{
-	width:50px;
-	height:50px;
     box-shadow:-2px -2px 5px #cec7c7,inset 2px 2px 5px #a29999;	
 }
+label{
+	padding-left:10px;
+	float:left;
+}
 .sbtn{
-	position:absolute;
-	left:50%; 
-	transform:translateX(-50%);
 	color:white;
 	font-size:16px;
 	font-family:sans-serif;
 	font-weight:bold;
-	background-color:#e01313;
+	background-color:#1b66edeb;
 	padding:10px;
 	border-radius:5px;
 	border:none;
-	box-shadow:inset 2px 2px 5px #7b1919,-2px -2px 5px #a29999;
+	box-shadow:inset 2px 2px 5px #1b66edeb,-2px -2px 5px #a29999;
 }
 .sbtn:hover{
-	padding:15px;
-	transition:padding 0.5s;
-    box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;	
+    box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #1b66edeb;
 }
-.pginfo{
-	width:100%;
-	height:auto;
+.img-cont{
+	width:70%;
+	height:250px;
 	position:relative;
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
-	padding:20px;
 }
-.pginfo > h1{
-	text-align:left;
-	margin-bottom:40px;
-}
-.pginfo > p{
-	font-size:20px;
-	font-family:cursive;
-}
-.gsbtn{
-  position:relative;
-  font-size:16px;
-	margin-top:30px;
-	color:white;
-	font-family:sans-serif;
-	font-weight:bold;
-	background-color:#e01313;
-	padding:10px;
-	border-radius:5px;
-	border:none;
-	box-shadow:inset 2px 2px 5px #7b1919,-2px -2px 5px #a29999;
-}
-.gsbtn:hover{
-	padding:20px;
-	transition:padding 0.5s;
-    box-shadow:2px 2px 5px #a29999,inset -2px -2px 5px #7b1919;	
-}	
-.socialic > button{
-	color:#e01313;
-	background-color:#fafafa;
-	font-weight:bold;
-	position:relative;
-	text-align:center
-	font-size:16px;
-	width:40px;
-	height:40px;
-	border-radius:50%;
-	margin-top:20px;
-	border-style:none;
-	box-shadow:inset -2px -2px 5px #a29999,2px 2px 5px #cec7c7;
-	transition:width 0.5s,height 0.5s;
-}
-.socialic > button:hover{
-	width:50px;
-	height:50px;
-    box-shadow:-2px -2px 5px #cec7c7,inset 2px 2px 5px #a29999;	
-}
+.img-elmt{
+			position:absolute;
+			left:0;
+			width:100%;
+			height:200px;
+			border-radius:10px;
+			display:flex;
+			box-shadow:inset 2px 2px 5px #1b66edeb,-2px -2px 5px #a29999;
+		}
+.imgdt{
+			width:inherit;
+			height:inherit;
+			border-radius:10px;
+			background:url("example.jpg");
+			background-size:cover;
+			background-repeat:no-repeat;
+			transition:all 0.2s;
+		}
+.img-dots{
+			width:50px;
+			height:20px;
+			position:absolute;
+			left:50%;
+			bottom:10px;
+			text-align:center;
+			transform:translateX(-50%);
+		}
+.img-dots > div{
+			width:10px;
+			height:10px;
+			display:inline-block;
+			border-radius:50%;
+			background-color:blue;
+		}
 @media only screen and (max-width:786px){
-	.form-cont{
-		border:none;
-		box-shadow:none;
-	}
 	.container{
 		display:block;
 		overflow:scroll;
