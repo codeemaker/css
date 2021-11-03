@@ -15,20 +15,32 @@
 				<form>
 					<h1>Contact</h1><br><br>
 					<input type="text" id="userid" placeholder="Enter userid" autocomplete="off"><br><br>
-					<label>Age :</label><br><br>
+					<label class="age-range">Age :</label><br><br>
 					<input type="range" id="range" min="1" max="100" value="1">
 					<div id="value" class="value"></div>
 					<br>
 					<input type="text" id="userid" placeholder="Enter userid" autocomplete="off"><br><br>
 					<input type="text" id="userid" placeholder="Enter userid" autocomplete="off"><br><br>
 					<div class="selector">
-					<div class="opt-btn"><i class="fas fa-user"></i></div>
-					<ul class="opt-list">
-						<li><i class="fas fa-male"></i></li>
-						<li><i class="fas fa-female"></i></li>
-						<li><i class="fas fa-transgender-alt"></i></li>
-						<li><i class="fas fa-ban"></i></li>
-					</ul>
+					<fieldset>
+			<legend>Question</legend>
+			<div class="wrapper">
+			<input type="radio" name="question" id="male" value="m" >
+			<label for="male"><div class="option-btn"></div><span class="text">Male</span></label>
+			</div>
+			<div class="wrapper">
+			<input type="radio" name="question" id="female" value="f" >
+			<label for="female"><div class="option-btn"></div><span class="text">Female</span></label>
+			</div>
+			<div class="wrapper">
+			<input type="radio" name="question" id="transgender" value="t" >
+			<label for="transgender"><div class="option-btn"></div><span class="text">Transgender</span></label>
+			</div>
+			<div class="wrapper">
+			<input type="radio" name="question" id="other" value="o">
+			<label for="other"><div class="option-btn"></div><span class="text">Other</span></label>
+			</div>
+		  </fieldset>
 					</div><br>
 					<input type="text" id="userid" placeholder="Enter userid" autocomplete="off"><br><br>
 					<button class="sbtn">Submit</button>
